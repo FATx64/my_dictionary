@@ -11,5 +11,6 @@ List<Character> characters = [
   Character(kanji: '漢字2', romaji: 'Kanji 2'),
   Character(kanji: '漢字3', romaji: 'Kanji 3'),
   Character(kanji: '漢字4', romaji: 'Kanji 4'),
+  Character(kanji: '漢字5', romaji: 'Kanji 5'),
   // Add more characters as needed
 ];

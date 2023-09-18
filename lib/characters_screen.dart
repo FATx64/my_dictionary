@@ -75,29 +75,56 @@ class CardWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Card(
-      elevation: 4.0,
-      child: Container(
-        padding: const EdgeInsets.all(16.0),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: <Widget>[
-            Text(
-              character.kanji,
-              style: TextStyle(
-                fontSize: 18.0,
-                fontWeight: FontWeight.bold,
+    return GestureDetector(
+      onTap: () {
+        // Show the Snackbar when the card is tapped
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(
+            content: Text(character.kanji),
+          ),
+        );
+      },
+      child: Card(
+        elevation: 4.0,
+        child: Container(
+          padding: const EdgeInsets.all(16.0),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: <Widget>[
+              Text(
+                character.kanji,
+                style: TextStyle(
+                  fontSize: 18.0,
+                  fontWeight: FontWeight.bold,
+                ),
               ),
-            ),
-            SizedBox(height: 8.0),
-            Text(
-              character.romaji,
-              style: TextStyle(fontSize: 16.0),
-            ),
-          ],
+              SizedBox(height: 8.0),
+              Text(
+                character.romaji,
+                style: TextStyle(fontSize: 16.0),
+              ),
+            ],
+          ),
         ),
       ),
     );
   }
 }
+
+/*
+class SnackBar extends StatelessWidget{
+
+  const SnackBar ({super.key});
+
+  @override
+  Widget build(BuildContext context){
+  return
+
+
+  }
+
+}
+
+ */
+
 

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:my_dictionary/User_Screen.dart';
 import 'package:my_dictionary/characters_screen.dart';
 import 'package:my_dictionary/color_screen.dart';
 
@@ -6,6 +7,7 @@ import 'package:my_dictionary/color_screen.dart';
 class HomeScreen extends StatelessWidget {
 
   const HomeScreen({Key? key}) : super(key: key);
+
 
   @override
   Widget build(BuildContext context) {
@@ -15,8 +17,11 @@ class HomeScreen extends StatelessWidget {
       ),
           body: SingleChildScrollView(
             scrollDirection: Axis.horizontal,
-            child: CardColumn(),)
+            child: CardColumn(),
+          ),
+
     );
+
   }
 }
 
@@ -93,4 +98,7 @@ Widget build(BuildContext context) {
     ),
   );
 }
+
+
 }
+
